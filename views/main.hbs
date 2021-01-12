@@ -1,0 +1,17 @@
+<h2>Pro player playing same champions</h2>
+<p>{{ proPlayer }}</p>
+
+<h2>List of suggested champions:</h2>
+{{#if listExists }}
+<ul>
+  {{#each suggestedPros }}
+  <li class={{ this.lane }}>{{ this.name }}</li>
+  {{/each}}
+</ul>
+{{/if}}
+
+<h2>List of my favorite League champions:</h2>
+{{> faveChamps }}
+
+<h2>List of my most hated League champions:</h2>
+{{> hatedChamps }}
